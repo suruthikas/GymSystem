@@ -10,11 +10,8 @@ namespace GymTesting
         [TestMethod]
         public void InstanceOK()
         {
-            ClsOrderLine AnOrder = new ClsOrderLine();
-            Assert.IsNotNull(AnOrder);
-
-
-
+            clsOrderLine AnOrderLine = new clsOrderLine();
+            Assert.IsNotNull(AnOrderLine);
 
 
         }

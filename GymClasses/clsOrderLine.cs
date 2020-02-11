@@ -1,6 +1,6 @@
 ﻿namespace GymClasses
 {
-    public class ClsOrderLine
+    public class clsOrderLine
     {
     }
 }
