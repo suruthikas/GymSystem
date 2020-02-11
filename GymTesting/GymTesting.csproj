@@ -49,8 +49,17 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+ SuruthikasBranch
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tstOrderLine.cs" />
+=======
+    <Compile Include="CLSCustomer.cs" />
+    <Compile Include="clsEquipment.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tstcustomer.cs" />
+    <Compile Include="tstEquipment.cs" />
+    <Compile Include="UnitTest1.cs" />
+master
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
