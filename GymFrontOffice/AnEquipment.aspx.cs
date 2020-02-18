@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using ClassLibrary;
+using GymClasses;
 
 public partial class AnEquipment : System.Web.UI.Page
 {
@@ -11,7 +7,7 @@ public partial class AnEquipment : System.Web.UI.Page
     {
         clsEquipment AnEquipment = new clsEquipment();
         AnEquipment = (clsEquipment)Session["AnEquipment"];
-        Response.Write(AnEquipment.EquipmentNo);
+        Response.Write(AnEquipment.EquipmentColour);
     }
 }
 
