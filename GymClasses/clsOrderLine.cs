@@ -12,8 +12,9 @@ get
 }
  
             set {
-
+                mEquipmentOrdered = value;
 }
+ }
 
 
 private String mCustomerName;     
@@ -55,18 +56,18 @@ set
         
 
 
-private Int32 mOrderLineNo;
+private Int32 mOrderNo;
 public int OrderNo { 
 
 get
   
           {
-return mOrderLineNo;
+return mOrderNo;
 
 }
 
 set {
-                mOrderLineNo = value;
+                mOrderNo = value;
 
 
 }
@@ -89,36 +90,60 @@ mTotalCost = value;
        
  
 
-public bool Find(int OrderLineNo) {
+public bool Find(int OrderNo) {
 
-            mOrderLineNo = 5;
+            mOrderNo = 5;
             return true;
 
     }
 
-        public bool Find(int OrderLineNo)
+        public bool Find(int OrderNo)
             {
-            mOrderLineNo = 5;
+            mOrderNo = 5;
             mDateProcessed = Convert.ToDateTime("16/09/2019");
             return true;
             }
 
-        public bool Find(int OrderLineNo)
+        public bool Find(int OrderNo)
             {
-            mOrderLineNo = 5;
+            mOrderNo = 5;
             mTotalCost = 21;
             return true;
 }
 
-        public bool Find(int OrderLineNo)
+        public bool Find(int OrderNo)
             {
-            mOrderLineNo = 5;
+            mOrderNo = 5;
             mCustomerName = "Mary Jones";
             return true;
             }
 
+        public bool Find(int OrderNo)
+{
+
+clsDataConnection DB = new clsDataConnection();
+DB.AddParameter("@OrderNo", OrderNo);
+DB.Execute("sproc_tblOrderLine_FilterByOrderLineNo");
+if (DB.Count == 1)
+{
+
+mOrderNo = Convert.ToInt32(DB.DataTable.Rows[0]["OrderNo"]);
+mEquipmentOrdered =  Convert.ToString(DB.DataTable.Rows[0]["Protein Powder"]);
+mTotalCost = "20";
+mCustomerName = "Mary Jones";
+mOrderProcessed = true;
+mDateProcessed = Convert.ToDateTime("16/09/2019");
+
+            return true;
+}
+else {
+                return false;
+}
 
 
 
+
+
+}
 }
 }
