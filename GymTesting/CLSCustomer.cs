@@ -1,4 +1,6 @@
-﻿namespace GymTesting
+﻿using System;
+
+namespace GymTesting
 {
     public class CLSCustomer
     {
@@ -8,5 +10,6 @@
         public string customerFirstName { get; internal set; }
         public string customerlastName { get; internal set; }
         public bool customerActive { get; internal set; }
+        public DateTime DateAdded { get; internal set; }
     }
 }

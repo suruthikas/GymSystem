@@ -11,4 +11,14 @@ public partial class AnCustomer : System.Web.UI.Page
     {
 
     }
+
+    protected void tbnOK_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void tbnCancel_Click(object sender, EventArgs e)
+    {
+
+    }
 }
