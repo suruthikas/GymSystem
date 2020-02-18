@@ -20,7 +20,7 @@ namespace GymTesting
         {
             clsOrderLine anOrderLine = new clsOrderLine();
 
-            int TestData = 1;
+            Int32 TestData = 1;
 
             anOrderLine.OrderNo = TestData;
             Assert.AreEqual(anOrderLine.OrderNo, TestData);
@@ -84,7 +84,106 @@ namespace GymTesting
         }
 
 
+        [TestMethod]
+        public void FindMethodOK()
+        {
+            clsAddress anOrderLine = new clsOrderLine();
+            Boolean Found = false;
+            Int32 OrderNo = 5;
+            Found = anOrderLine.Find(OrderNo);
+            Assert.IsTrue(Found);
 
+        }
+
+        [TestMethod]
+        public void TestOrderLineNoFound()
+        {
+            clsOrderLine anOrderLine = new clsOrderLine();
+
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 OrderLineNo = 5;
+            Found = anOrderLine.Find(OrderLineNo);
+            if (anOrderLine.OrderLineNo != 5)
+            {
+
+                OK = false;
+            }
+
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestDateProcessedFound()
+        {
+            clsOrderLine anOrderLine = new clsOrderLine();
+
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 OrderLineNo = 5;
+            Found = anOrderLine.Find(OrderLineNo);
+            if (anOrderLine.DateProcessed != Convert.ToDateTime("16/09/2019")) ;
+            {
+
+                OK = false;
+            }
+
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestTotalCostFound()
+        {
+            clsOrderLine anOrderLine = new clsOrderLine();
+
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 OrderLineNo = 5;
+            Found = anOrderLine.Find(OrderLineNo);
+            if (anOrderLine.TotalCost != 20)
+            {
+
+                OK = false;
+            }
+
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestCustomerNameFound()
+        {
+            clsOrderLine anOrderLine = new clsOrderLine();
+
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 OrderLineNo = 5;
+            Found = anOrderLine.Find(OrderLineNo);
+            if (anOrderLine.CustomerName != "Mary Jones")
+            {
+
+                OK = false;
+            }
+
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestEquipmentOrderedFound()
+        {
+            clsOrderLine anOrderLine = new clsOrderLine();
+
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 OrderLineNo = 5;
+            Found = anOrderLine.Find(OrderLineNo);
+            if (anOrderLine.EquipmentOrdered != "Protein powder")
+            {
+
+                OK = false;
+            }
+
+            Assert.IsTrue(OK);
+        }
 
 
 
