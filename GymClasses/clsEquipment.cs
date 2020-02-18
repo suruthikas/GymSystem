@@ -1,9 +1,8 @@
 ﻿using System;
-using GymClasses;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-namespace GymTesting
+
+namespace GymClasses
 {
-    class clsEquipment
+    public class clsEquipment
     {
         public bool Find(int EquipmentNo)
         {
@@ -80,7 +79,8 @@ namespace GymTesting
             }
         }
 
-        public string EquipmentColour {
+        public string EquipmentColour
+        {
             get
             {
                 return mEquipmentColour;
@@ -91,7 +91,8 @@ namespace GymTesting
 
 
 
-        }
+            }
 
-        } }
+        }
+    }
 }
