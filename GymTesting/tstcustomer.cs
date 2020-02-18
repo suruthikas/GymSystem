@@ -73,9 +73,23 @@ namespace GymTesting
             CLSCustomer AnCustomer = new CLSCustomer();
             //create some test data to assign to the table 
             Boolean TestData = true;
+            //assign the data to the table
             AnCustomer.customerActive = TestData;
             //test to see that the two values are the same
             Assert.AreEqual(AnCustomer.customerActive, TestData);
+        }
+
+        [TestMethod]
+        public void DateAdded()
+        {
+            //create an instance of the class we want to create
+            CLSCustomer AnCustomer = new CLSCustomer();
+            //create some test data to assign to the table 
+            DateTime TestData = DateTime.Now.Date;
+            //assign the data to the table
+            AnCustomer.DateAdded = TestData;
+            //test to see that the two values are the same
+            Assert.AreEqual(AnCustomer.DateAdded, TestData);
         }
     }
 }
